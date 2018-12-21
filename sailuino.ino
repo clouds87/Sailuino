@@ -15,7 +15,7 @@
 // ++
 ///////////////////////////////////////////////////////////////////////////////
 
-//#include "sailuino.hpp"   
+#include "sailuino.hpp"
 
 SoftwareSerial bt_uart = SoftwareSerial(BT_RX_PIN, BT_TX_PIN);
 Servo          ru_srv;
@@ -64,8 +64,9 @@ void loop()
   // If there's any data on the bluetooth serial buffer, show them on the Serial Monitor
   while (bt_uart.available() > 0) {
     cmd = bt_uart.read();
-    Serial.print("1. bt_uart :");
+    Serial.print("bt_uart -> ");
     Serial.print(bt_uart.available());
+    Serial.print("| cmd -> ");
     Serial.println(cmd);
   }
   
@@ -210,7 +211,8 @@ void loop()
     Serial.println(bs_srv_pos);
   break; 
    
-  case('X'): reset();  
+  case('X'):
+	reset();
   break;  
   
   default:

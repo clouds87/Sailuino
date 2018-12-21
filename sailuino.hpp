@@ -26,8 +26,8 @@
 #include <Servo.h>
 
 // Definition of some global constants and macros
-#define BT_TX_PIN   11   // Bluetooth software serial Tx pin
-#define BT_RX_PIN   10   // Bluetooth software serial Rx pin
+#define BT_TX_PIN   12   // Bluetooth software serial Tx pin
+#define BT_RX_PIN   13   // Bluetooth software serial Rx pin
 #define RU_SRV_PIN   5   // Rudder servo control pin      // dal pin pwm 6 frecato
 #define MS_SRV_PIN   3   // Main sail servo control pin
 #define BS_SRV_PIN   9   // Bow sail servo control pin
